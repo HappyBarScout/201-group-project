@@ -1,0 +1,16 @@
+#search_box {
+  float: right;
+}
+.box {
+  display: inline-block;
+}
+.box_1 {
+  display: inline-block;
+}
+button {
+  float: right;
+}
+img {
+  width: 25px;
+  length: 25px;
+}
