@@ -52,6 +52,11 @@ hr{
 form {
                 width:500px;
                 margin:50px auto;
+                display: flex;
+}
+
+#search{
+height: 40px;
 }
 .search {
                 padding:8px 15px;
@@ -89,4 +94,9 @@ footer{
   height: 40px;
   color: #8EC57B;
   margin-top: 15px;
+}
+
+input{
+  width: 450px;
+  height: 40px;
 }
