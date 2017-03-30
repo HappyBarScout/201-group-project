@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>title</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Bar Scout</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="CSS/barscout.css">
+  <link rel="stylesheet" href="style.css">
   <script src="JS/script.js"></script>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <div id="mySidenav" class="sidenav">
@@ -14,17 +17,19 @@
     <a href="add_bar.html">Add</a>
     <a href="about.html">About</a>
   </div>
-
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-    <hr>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+  <hr id="mainhr">
+<table class="tableSpot">
+  <th>Table</th>
+</table>
     <div id="top">
     <img src="images/BS-logo.svg">
-    <form>
-      <input type="text" placeholder="Search..." required>
-      <input type="button" value="Search">
-    </form>
   </div>
   <img id="backgr" src="images/Drinks2.jpg">
   <footer>&copy; 2017 BAR SCOUT. ALL RIGHTS RESERVED</footer>
+  <script src="JS/app.js"></script>
+  <script src="JS/data.js"></script>
+
+
 </body>
 </html>
