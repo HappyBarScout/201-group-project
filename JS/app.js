@@ -171,6 +171,19 @@ function formSubmit() {
 
 };
 
+function dropSelect(){
+  // get from local storage
+  switch (JSON) {
+    case ("Sunday"):
+      // change class to .hidden for bar id numbers
+      break;
+    default:
+
+  }
+}
+
+
+
 
 function tableBuilder(tableLocation, arrayDataBuilder) {
   var body = document.getElementsByClassName(tableLocation)[0];
@@ -187,6 +200,5 @@ function tableBuilder(tableLocation, arrayDataBuilder) {
 
 
 
-
+ window.addEventListener("click", dropSelect);
 // window.addEventListener("click", formSubmit);
-
