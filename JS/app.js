@@ -186,7 +186,11 @@ function tableBuilder(tableLocation, arrayDataBuilder) {
 }
 
 
+// local storage
+// Store
+localStorage.setItem("Name", "Smith");
+// Retrieve
+
 
 
 // window.addEventListener("click", formSubmit);
-
