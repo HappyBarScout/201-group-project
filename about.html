@@ -3,28 +3,26 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>title</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="script.js"></script>
+  <title>Bar Scout</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="CSS/barscout.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="JS/script.js"></script>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="location.html">Locations</a>
-      <a href="add_bar.html">Add your favorite happy hour</a>
-    </div>
-
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-    <hr>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="location.html">Locations</a>
+    <a href="add_bar.html">Add</a>
+    <a href="about.html">About</a>
+  </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+  <hr id="mainhr">
     <div id="top">
     <img src="images/BS-logo.svg">
   </div>
-  <img id="backgr" src="images/Drinks.jpg">
-  <p id="text">what up</p>
-
   <div class="relative">
     <img id="backgr" src="images/Drinks.jpg">
         <p class="absolute-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -33,5 +31,8 @@
 
 </div>
   <footer>&copy; 2017 BAR SCOUT. ALL RIGHTS RESERVED</footer>
+  <script src="JS/data.js"></script>
+  <script src="JS/app.js"></script>
+
 </body>
 </html>
