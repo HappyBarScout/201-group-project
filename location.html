@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>title</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Bar Scout</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="CSS/barscout.css">
   <script src="JS/script.js"></script>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <div id="mySidenav" class="sidenav">
@@ -17,16 +19,17 @@
 
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
   <hr>
-  <div id="top">
+<!-- <table class="tableSpot">
+  <th>Table</th>
+</table> -->
+
+    <div id="top">
     <img src="images/BS-logo.svg">
-    <form>
-      <input type="text" placeholder="Search..." required>
-      <input type="button" value="Search">
-    </form>
   </div>
   <script src="JS/data.js"></script>
   <script src="JS/app.js"></script>s
 
+  <!-- Wrapper for slides -->
   <!-- Wrapper for slides -->
   <div class="row">
 
@@ -42,7 +45,7 @@
       </div>
     </div>
     <div class="item">
-      <div>
+      <div id="knock">
         <h2>The Knock Back</h2>
         <p>The Knock Back encapsulates the idea that bars are primarily supposed to be fun neighborhood spots. There are plenty of great cocktails to choose from, and they’re $2 off during happy hour. Also, wines by the glass, draught beer, and an entire boiler maker menu is $1 cheaper, too, with well-drinks clocking in at $3. HH food includes brussels sprouts ($6), sliders ($4.50), and more, but what’s really great here is the vibe. It’s always a party, and you’re always welcome</p>
         <br>
@@ -208,8 +211,10 @@
 
 </div>
 
+  <img id="backgr" src="images/Drinks2.jpg">
+  <footer>&copy; 2017 BAR SCOUT. ALL RIGHTS RESERVED</footer>
+  <script src="JS/app.js"></script>
+  <script src="JS/data.js"></script>
 
-<img id="backgr" src="images/Drinks2.jpg">
-<footer>&copy; 2017 BAR SCOUT. ALL RIGHTS RESERVED</footer>
 </body>
 </html>

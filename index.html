@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+[<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <title>Bar Scout</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="CSS/barscout.css">
+  <link rel="stylesheet" href="style.css">
   <script src="JS/script.js"></script>
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">Home</a>
@@ -16,18 +16,93 @@
     <a href="add_bar.html">Add</a>
     <a href="about.html">About</a>
   </div>
-
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-  <hr>
+  <hr id="mainhr">
+
   <div id="top">
-    <img src="images/BS-logo.svg">
-    <form>
-      <input type="text" placeholder="Search by type of food or hours" required>
-      <img id="search" src="images/Search.png">
-    </form>
+    <img id=logo src="images/BS-logo.svg">
+    <div class="dropdown">
+      <button class="hoverButtons">Bars</button>
+      <div class="dropdown-content">
+        <a id="dropdown1" href="#">Bang Bang PDX</a>
+        <a id="dropdown1" href="location.html">The Knock Back</a>
+        <a id="dropdown1" href="location.html">Aviary</a>
+        <a id="dropdown1" href="location.html">Interurban</a>
+        <a id="dropdown1" href="location.html">Rae's Lakeveiw Lounge</a>
+        <a id="dropdown1" href="location.html">Paley's Place</a>
+        <a id="dropdown1" href="location.html">Bartini</a>
+        <a id="dropdown1" href="location.html">Ringside</a>
+        <a id="dropdown1" href="location.html">Teardrop Lounge</a>
+        <a id="dropdown1" href="location.html">Clyde Common</a>
+        <a id="dropdown1" href="location.html">Imperial</a>
+        <a id="dropdown1" href="location.html">Saucebox</a>
+        <a id="dropdown1" href="location.html">Trifecta Tavern</a>
+        <a id="dropdown1" href="location.html">Tapalaya</a>
+        <a id="dropdown1" href="location.html">Aalto Lounge</a>
+        <a id="dropdown1" href="location.html">Dots Cafe</a>
+        <a id="dropdown1" href="location.html">Slingshot</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="hoverButtons">Food</button>
+      <div class="dropdown-content">
+        <a id="dropdown1" href="location.html">Wings</a>
+        <a id="dropdown1" href="location.html">American</a>
+        <a id="dropdown1" href="location.html">Japanese</a>
+        <a id="dropdown1" href="location.html">American Fusion</a>
+        <a id="dropdown1" href="location.html">Fine Dining</a>
+        <a id="dropdown1" href="location.html">Martini Bar</a>
+        <a id="dropdown1" href="location.html">Steakhouse</a>
+        <a id="dropdown1" href="location.html">Domestic and Foreign</a>
+        <a id="dropdown1" href="location.html">Seafood, Grill</a>
+        <a id="dropdown1" href="location.html">Thai</a>
+        <a id="dropdown1" href="location.html">Karaoke</a>
+        <a id="dropdown1" href="location.html">Southern</a>
+        <a id="dropdown1" href="location.html">Snacks</a>
+        <a id="dropdown1" href="location.html">Bar</a>
+        <a id="dropdown1" href="location.html">Dinner food</a>
+        <a id="dropdown1" href="location.html">Pub food</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="hoverButtons">Hours</button>
+      <div class="dropdown-content">
+        <a id="dropdown1" href="location.html">All Day</a>
+        <a id="dropdown1" href="location.html">2PM</a>
+        <a id="dropdown1" href="location.html">3PM</a>
+        <a id="dropdown1" href="location.html">4PM</a>
+        <a id="dropdown1" href="location.html">5PM</a>
+        <a id="dropdown1" href="location.html">6PM</a>
+        <a id="dropdown1" href="location.html">7PM</a>
+        <a id="dropdown1" href="location.html">8PM</a>
+        <a id="dropdown1" href="location.html">9PM</a>
+        <a id="dropdown1" href="location.html">10PM</a>
+        <a id="dropdown1" href="location.html">11PM</a>
+        <a id="dropdown1" href="location.html">12PM</a>
+        <a id="dropdown1" href="location.html">Till Close</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="hoverButtons">Days</button>
+      <div class="dropdown-content">
+        <a id="dropdown1" href="location.html">Monday</a>
+        <a id="dropdown1" href="location.html">Tuesday</a>
+        <a id="dropdown1" href="location.html">Wedsnday</a>
+        <a id="dropdown1" href="location.html">Thursday</a>
+        <a id="dropdown1" href="location.html">Friday</a>
+        <a id="dropdown1" href="location.html">Saturday</a>
+        <a id="dropdown1" href="location.html">Sunday</a>
+      </div>
+    </div>
   </div>
+  <div class="background_image">
+    <img id="backgr" src="images/BS-Home-with-logo.png">
+  </div>
+<<<<<<< HEAD
   <img id="backgr" src="images/BS-Home-with-logo.png">
   <!-- Carousel -->
+=======
+>>>>>>> bc82af56c2d01250cfc7e6eea9e57a454796ca3e
   <div id="carousel-example" class="carousel slide" data-ride="carousel">
     <!-- Wrapper for slides -->
     <div class="row">
@@ -48,6 +123,8 @@
           <div class="item">
             <div class="carousel-content">
               <div>
+
+
                 <h2>The Knock Back</h2>
                 <p>The Knock Back encapsulates the idea that bars are primarily supposed to be fun neighborhood spots. There are plenty of great cocktails to choose from, and they’re $2 off during happy hour. Also, wines by the glass, draught beer, and an entire boiler maker menu is $1 cheaper, too, with well-drinks clocking in at $3. HH food includes brussels sprouts ($6), sliders ($4.50), and more, but what’s really great here is the vibe. It’s always a party, and you’re always welcome</p>
                 <br>
@@ -60,6 +137,7 @@
           <div class="item">
             <div class="carousel-content">
               <div>
+
                 <h2>Aviary</h2>
                 <p>You have to love a place with food this playful, fun, elegant, and thoughtful that still serves $2 Old German tallboys at happy hour. Of course, you could always got for a daily craft cocktail for $7. Whatever you do, don’t miss the tempura green beans in curry sauce for $8, as they are amazing. </p>
                 <br>
@@ -72,6 +150,7 @@
           <div class="item">
             <div class="carousel-content">
               <div>
+
                 <h2>Interurban</h2>
                 <p>Interurban likes to blur the line between bar and restaurant, and serves equally well as both. For happy hour, select cocktails and house wines are just $5, and mugs of beer are available for $4. There’s a nice array of food options on the cheap, but the mini corn-dogs with fries and the much healthier option of grilled broccolini are both standouts at $5.</p>
                 <br>
@@ -84,6 +163,7 @@
           <div class="item">
             <div class="carousel-content">
               <div>
+
                 <h2>Rae's Lakeview Lounge</h2>
                 <p>There’s no lake anywhere in sight, but there is a great happy hour list that includes, among other things, $1 High-Lifes. If beer isn’t your thing, or if the High-Life isn’t, grab a glass of wine for $3 or a well drink for $4, and if you’re hungry, there are plenty of well-priced quality food items.</p>
                 <br>
@@ -96,6 +176,7 @@
           <div class="item">
             <div class="carousel-content">
               <div>
+
                 <h2>Paley's Place</h2>
                 <p>It’s impossible to overstate the influence that Vitaly "Vito" Paley has had on the Portland, and entire North Western, dining scene. Paley’s Place was the progenitor of our farm-to-table PacNW dining style, and remains a Portland institution. It’s pricey, but that’s why there’s happy hour, where you can sip fine French wine at $5 a glass while snacking on fried duck wings for $8, or get just a simple but exquisite hamburger for only $8.</p>
                 <br>
@@ -108,6 +189,8 @@
           <div class="item">
             <div class="carousel-content">
               <div>
+
+
                 <h2>Bartini</h2>
                 <p>You're almost certain get a hangover, but that's what a huge selection of half-off “martinis” will do. Bartini delivers over 100 $4 house martinis, from Basilberry to the Diablo with habanero-infused vodka. Dishes of seared ahi tuna and mini crab cakes cost $4, and chicken satay with peanut sauce and shrimp and grits are $7 apiece.</p>
                 <br>
@@ -120,6 +203,8 @@
           <div class="item">
             <div class="carousel-content">
               <div>
+
+
                 <h2>Ringside</h2>
                 <p>The old-school RingSide Steakhouse recently upped its prices, but they were so low already that HH remains solid. The restaurant’s steak bites, quarter-pound cheeseburger, and jo-jos all clock in at under $5 (yes, the $2.99 burger is a thing of the past</p>
                 <br>
@@ -132,6 +217,7 @@
           <div class="item">
             <div class="carousel-content">
               <div>
+
                 <h2>Teardrop Lounge</h2>
                 <p>Teardrop Lounge arguably launched the entire craft cocktail bartending scene in Portland and remains as relevant and superb as always with a constantly developing menu full of classics and original drinks. Still, cocktails are expensive, often rising into the double digits.</p>
                 <br>
@@ -144,6 +230,7 @@
           <div class="item">
             <div class="carousel-content">
               <div>
+
                 <h2>Clyde Common</h2>
                 <p>The bar at Clyde Common is often packed at happy hour thanks to its menu of $6 cocktails (including favorites like the Bittersweet Symphonic and Spelling Bee) and $3 to $6 snacks. Light snackers can reach for togarashi popcorn; hungrier folks might fare better with the $8 burger.</p>
                 <br>
@@ -156,6 +243,7 @@
           <div class="item">
             <div class="carousel-content">
               <div>
+
                 <h2>Imperial</h2>
                 <p>Imperial's bar offers its draft cocktails for just $5 each during happy hour (generally featuring the Vieux Carre as a mainstay and another rotating option), as well as a food menu with a dozen discounted options. The superb flat-top burger can be had for $6, which you can pair with some of the city's best fries for an additional $3.</p>
                 <br>
@@ -168,6 +256,7 @@
           <div class="item">
             <div class="carousel-content">
               <div>
+
                 <h2>Saucebox</h2>
                 <p>Any happy hour list would be remiss if it didn't include the clubby Saucebox. It's just fun. Hip happy hour snacks range from nigiri to chicken pad thai for $2 to 6, and to drink, you'll find three cocktails, read and white wines, and sake for $5, plus dollar off drafts.</p>
                 <br>
@@ -192,6 +281,7 @@
           <div class="item">
             <div class="carousel-content">
               <div>
+
                 <h2>Tapalaya</h2>
                 <p>Tapalaya brings an eclectic Creole and Cajun happy hour, with discounted cocktails like $4 Hurricanes and $3 martinis. Food includes Asian-influenced plates like boudin egg rolls filled with Cajun rice and pork sausage for $3 and fish sauce wings for $6.</p>
                 <br>
@@ -204,6 +294,7 @@
           <div class="item">
             <div class="carousel-content">
               <div>
+
                 <h2>Aalto Lounge</h2>
                 <p>This happy hour is long-running for a reason: a small but solid menu of $2 cocktails and food. The Belmont Jewel cocktail is bourbon, lemon, pomegranate juice, and orange blossom water, and on the food front, there's a grilled cheese sandwich and oven-baked pretzel. There are also buckets of four beers for $8 to 12 and featured bottles of red and white wine for $10.</p>
                 <br>
@@ -216,6 +307,7 @@
           <div class="item">
             <div class="carousel-content">
               <div>
+
                 <h2>Dots Cafe</h2>
                 <p>Dots Cafe is a Portland institution and has remained relatively unchanged: a cross between a dive bar, a lounge, and a diner. The happy hour menu includes food specials, from the famous fries to healthier options such as salads. Also find $1-off wine, and 50 cents-off beer and well drinks. </p>
                 <br>
@@ -235,24 +327,28 @@
                 <br>
                 <p>5532 SE Center St Portland, OR 97206</p>
               </div>
-            </div>
           </div>
-
         </div>
+
+
       </div>
     </div>
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
   </div>
-</section>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
 </div>
 </div>
-</main>
+</div>
+<footer>&copy; 2017 BAR SCOUT. ALL RIGHTS RESERVED</footer>
+<script src="JS/data.js"></script>
+<script src="JS/app.js"></script>
+<!-- Carousel -->
+<!-- fix this mess -->
 <script src="bootstrap/jquery-2.2.0.min.js"></script>
 <script src="bootstrap/js/custom.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
