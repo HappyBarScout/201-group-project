@@ -5,11 +5,10 @@
   <title>Bar Scout</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="CSS/barscout.css">
-  <link rel="stylesheet" href="style.css">
-  <script sr="JS/script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,500" rel="stylesheet">
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body id="body">
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">Home</a>
@@ -17,15 +16,17 @@
     <a href="add_bar.html">Add</a>
     <a href="about.html">About</a>
   </div>
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">Menu &#9776; </span>
   <hr id="mainhr">
 <table class="tableSpot">
-  <th>Table</th>
+  <th></th>
 </table>
     <div id="top">
-    <img src="images/BS-logo.svg">
+    <img id="logo" src="images/BS-logo.svg"><h1 id="head1">We will Lead you to<br> your next happy place!</h1>
   </div>
-  <img id="backgr" src="images/Drinks2.jpg">
+  <div class="background_image1">
+<img id="backgr" src="images/Drinks2.jpg">
+<div>
   <footer>&copy; 2017 BAR SCOUT. ALL RIGHTS RESERVED</footer>
   <script src="JS/app.js"></script>
   <script src="JS/data.js"></script>
