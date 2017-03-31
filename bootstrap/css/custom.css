@@ -27,7 +27,6 @@ body {
 
 .navbar-brand {
     text-align: center;
-    position: absolute;
     top: 0;
     padding-top: 0;
     transform: translateX(-50%);
@@ -56,7 +55,6 @@ div.navbar-header {
 
 .logo-cap {
   font-family: Lobster;
-  position: absolute;
    top: 0%;
    left: 0;
    width: 100%;
