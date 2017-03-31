@@ -105,6 +105,7 @@ function formSubmit() {
 
 // get the request clicked from local storage and change the one that we don't want to hidden
 function dropSelect(){
+  recordClick()
   // get from local storage
   switch (localStorage.getItem("selectValue")) {
     case ("monday"):
@@ -144,18 +145,19 @@ function dropSelect(){
 // get the name or id of the link clicked in index, and store to localStorage
 function recordClick(event) {
   var clickedItem = event.target;
-  var itemSource = clickedItem.src;
-  var lastSlash = itemSource.lastIndexOf("/") + 1;
-  itemSource = itemSource.substring(lastSlash);
-  console.log(itemSource + " was clicked.");
-  resultsArray.push(itemSource);
-  count++;
-  for (var index = 0; index < images.length; index++) {
-    if ((images[index].imageSource) === itemSource) {
-      images[index].y ++;
-    }
-  }
-  localStorage.setItem("count", count);
+  console.log(clickedItem);
+  var linkID = clickedItem.id;
+  // var lastSlash = itemSource.lastIndexOf("/") + 1;
+  // itemSource = itemSource.substring(lastSlash);
+  console.log(linkID + " was clicked.");
+
+  // resultsArray.push(itemSource);
+  // for (var index = 0; index < images.length; index++) {
+  //   if ((images[index].imageSource) === itemSource) {
+  //     images[index].y ++;
+  //   }
+
+  localStorage.setItem("clickedItem", linkID);
 };
 
 // builds one row of a table, give the location in the html page and the array
@@ -174,5 +176,6 @@ function tableBuilder(tableLocation, arrayDataBuilder) {
 
 // event listeners
 
-window.addEventListener("click", dropSelect);
+window.addEventListener("click", recordClick);
+// window.addEventListener("click", dropSelect);
 // window.addEventListener("click", formSubmit);
