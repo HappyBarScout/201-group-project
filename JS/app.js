@@ -146,12 +146,13 @@ detailArray.push(["This unassuming spot near Foster Burger in Southeast serves $
 
 
 function openNav() {
-  document.getElementById("mySidenav").style.width = "175px";
+  document.getElementById("mySidenav").style.width = "200px";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+
 
 function tableBuilder(tableLocation, arrayDataBuilder) {
   var body = document.getElementsByClassName(tableLocation)[0];
@@ -192,16 +193,4 @@ function saveBar() {
         localStorage.setItem("newBar",JSON.stringify(newBarArray[newBarArray.length-1]));
  // storedNames = JSON.parse(localStorage.getItem("names"));
 };
-};
-
-window.addEventListener("load", addBarTable);
-
-function addBarTable(){
-var localNewBar = JSON.parse(localStorage.getItem("newBar"));
-console.log("add bar");
-newBarArray.push(localNewBar);
-console.log("add new bar to array");
-console.log(newBarArray);
-tableBuilder("addBar", barHeaderArray);
-tableBuilder("addBar", newBarArray);
 };
