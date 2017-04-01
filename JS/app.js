@@ -78,7 +78,7 @@ detailArray.push(["This unassuming spot near Foster Burger in Southeast serves $
 
 // js for the popout nav
 function openNav() {
-  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("mySidenav").style.width = "175px";
 }
 
 function closeNav() {
@@ -173,6 +173,13 @@ function tableBuilder(tableLocation, arrayDataBuilder) {
 }
 
 // event listeners
+
+// local storage
+// Store
+localStorage.setItem("");
+// Retrieve
+
+
 
 window.addEventListener("click", dropSelect);
 // window.addEventListener("click", formSubmit);

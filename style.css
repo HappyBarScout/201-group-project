@@ -1,6 +1,20 @@
 #body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Oswald', sans-serif;
   border: 1px white solid;
+}
+#head1{
+  height: 80px;
+  background-color: #BBDEB4;
+  position: relative;
+  top: 40px;
+}
+#abouth1{
+  width: 600px;
+  position: relative;
+  right: 38px;
+  top: 20px;
+  background-color: #BBDEB4;
+  height: 185px;
 }
 .sidenav {
   height: 100%;
@@ -39,7 +53,7 @@ span{
 #mainhr{
   height:25px;
   background-color:#414042;
-  margin-top: 43px;
+  margin-top: 50px;
 }
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -81,10 +95,24 @@ form {
 .background_image{
 margin: auto;
 width: 90%;
-/*border: 5px red solid;*/
+border: 5px #414042 solid;
 position: relative;
 top: -125px;
+}
+.background_image1{
+margin: auto;
+width: 90%;
+border: 5px #414042 solid;
+position: relative;
+bottom:110px;
+}
 
+.background_image2{
+margin: auto;
+width: 90%;
+border: 5px #414042 solid;
+position: relative;
+bottom: 70px;
 }
 
 #top{
@@ -110,9 +138,15 @@ input{
 
 /*Text on background image*/
 .relative{position:relative; width:;}
-.absolute-text{position:absolute; bottom:0; font-size:24px; font-family:"vedana"; background:rgba(251,251,251,0.5);
-padding:; width:80%; text-align:center; margin-left: 100px; margin-bottom: 300px;}
-.absolute-text a{font-size:16px; color:#b92b27;}
+#absolute-text{position:absolute; bottom:0;
+  font-size:24px;
+  font-family: 'Oswald';
+  background:rgba(251,251,251,0.5);
+   padding:; width:80%;
+   text-align:center;
+   margin-left: 100px;
+   margin-bottom: 400px;}
+#absolute-text a{font-size:16px; color:#b92b27;}
 
 /* Dropdown Button */
 .hoverButtons {
@@ -128,6 +162,7 @@ padding:; width:80%; text-align:center; margin-left: 100px; margin-bottom: 300px
     display: inline-block;
     position: relative;
     bottom: -60px;
+    right: 40px;
     /*margin-top: 80px;*/
 
 }
