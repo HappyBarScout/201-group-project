@@ -1,19 +1,36 @@
-function showHidden() {
-    console.log("Show_Hidden")
-  getElementById("bang").className = "show";
-  getElementById("knock").className = "show";
-  getElementById("aviary").className = "show";
-  getElementById("Interurban").className = "show";
-  getElementById("raes").className = "show";
-  getElementById("paleys").className = "show";
-  getElementById("bartini").className = "show";
-  getElementById("ringside").className = "show";
-  getElementById("teardrop").className = "show";
-  getElementById("clyde").className = "show";
-  getElementById("imperial").className = "show";
-  getElementById("sauce").className = "show";
-  getElementById("trifecta").className = "show";
-  getElementById("aalto").className = "show";
-  getElementById("dots").className = "show";
-  getElementById("slingshot").className = "show";
+// function showHidden() {
+//     console.log("Show_Hidden")
+//     var test= document.getElementById("bang");
+//         console.log(test);
+//         test.className = "show";
+//         test.classList.toggle("show");
+//   document.getElementById("knock").className = "show";
+//   document.getElementById("aviary").className = "show";
+//   document.getElementById("Interurban").className = "show";
+//   document.getElementById("raes").className = "show";
+//   document.getElementById("paleys").className = "show";
+//   document.getElementById("bartini").className = "show";
+//   document.getElementById("ringside").className = "show";
+//   document.getElementById("teardrop").className = "show";
+//   document.getElementById("clyde").className = "show";
+//   document.getElementById("imperial").className = "show";
+//   document.getElementById("sauce").className = "show";
+//   document.getElementById("trifecta").className = "show";
+//   document.getElementById("aalto").className = "show";
+//   document.getElementById("dots").className = "show";
+//   document.getElementById("slingshot").className = "show";
+// }
+var acc = document.getElementsByClassName("item");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
 }
