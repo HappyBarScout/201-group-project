@@ -1,7 +1,7 @@
 .item {
 display: block;
 }
-.Hide {
+.hide {
   display: none;
 }
 button.accordion {
@@ -25,4 +25,7 @@ div.panel {
     padding: 0 18px;
     display: none;
     background-color: white;
+}
+#class {
+  border: solid black 1px;
 }
