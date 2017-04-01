@@ -191,6 +191,7 @@ function tableBuilder(tableLocation, arrayDataBuilder) {
 localStorage.setItem("Name", "Smith");
 // Retrieve
 
-
-
-// window.addEventListener("click", formSubmit);
+window.addEventListener("click", formSubmit);
+Function formbuilder(){
+var barForm = document.GetElementById("addBarForm")
+};
