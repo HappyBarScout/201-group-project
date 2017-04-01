@@ -1,5 +1,14 @@
 // This file sets up data for the javascript funtionality
 
+function openNav() {
+  document.getElementById("mySidenav").style.width = "175px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+
 var barArray =[];
 
 

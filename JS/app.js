@@ -154,8 +154,7 @@ function closeNav() {
 }
 
 
-function formSubmit() {
-  getElementsByTagName("submit");
+
 
   function addBar(){
     console.log("add new Bar");
@@ -192,6 +191,3 @@ localStorage.setItem("Name", "Smith");
 // Retrieve
 
 window.addEventListener("click", formSubmit);
-Function formbuilder(){
-var barForm = document.GetElementById("addBarForm")
-};
