@@ -153,24 +153,6 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
-
-
-
-  function addBar(){
-    console.log("add new Bar");
-    var barLocation = document.getElementById("barLocationInput").value;
-    var barType = document.getElementById("barTypeInput").value;
-    var barHours = document.getElementById("barHoursInput").value;
-    var barLocation = document.getElementById("barLocationInput").value;
-    var positionReference = (barArray.length++);
-    var openBar = barArray.push(new barObject(barLocation, barType, barHours, barLocation, positionReference));
-    console.log(openBar);
-  }
-
-
-};
-
-
 function tableBuilder(tableLocation, arrayDataBuilder) {
   var body = document.getElementsByClassName(tableLocation)[0];
   var row = document.createElement("tr");
@@ -184,10 +166,42 @@ function tableBuilder(tableLocation, arrayDataBuilder) {
   body.appendChild(row);
 }
 
+var newBarArray =[];
+var barHeaderArray =["Bar Name", "Location", "Days", "Hours"];
 
-// local storage
-// Store
-localStorage.setItem("Name", "Smith");
-// Retrieve
+function saveBar() {
 
-window.addEventListener("click", formSubmit);
+
+  if (typeof(Storage) != "undefined") {
+        console.log("add new Bar");
+        var barName = document.getElementById("bar").value;
+        console.log('Found ' + barName);
+        var barLocation = document.getElementById("location").value;
+        console.log('Found ' + barLocation);
+
+        var barDays = document.getElementById("days").value;
+
+          console.log('Found ' + barDays);
+
+        var barHours = document.getElementById("hours").value;
+        console.log('Found ' + barHours);
+
+      var openBar = newBarArray.push([barLocation, barName, barHours,barDays]);
+        console.log('Found ' +  JSON.stringify(newBarArray[newBarArray.length-1]));
+
+        localStorage.setItem("newBar",JSON.stringify(newBarArray[newBarArray.length-1]));
+ // storedNames = JSON.parse(localStorage.getItem("names"));
+};
+};
+
+window.addEventListener("load", addBarTable);
+
+function addBarTable(){
+var localNewBar = JSON.parse(localStorage.getItem("newBar"));
+console.log("add bar");
+newBarArray.push(localNewBar);
+console.log("add new bar to array");
+console.log(newBarArray);
+tableBuilder("addBar", barHeaderArray);
+tableBuilder("addBar", newBarArray);
+};
