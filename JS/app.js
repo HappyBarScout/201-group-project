@@ -176,7 +176,7 @@ function tableBuilder(tableLocation, arrayDataBuilder) {
 
 // local storage
 // Store
-localStorage.setItem("");
+//localStorage.setItem("");
 // Retrieve
 
 
