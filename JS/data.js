@@ -1,11 +1,14 @@
-// js for the popout nav
+
 function openNav() {
-  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("mySidenav").style.width = "175px";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+
+
+var barArray =[];
 
 var bangArray = ["dropdown1" , "dropdown18", "dropdown27" ,"dropdown38" , "dropdown42", "dropdown43", "dropdown44" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
 var knockArray = ["dropdown2" , "dropdown19", "dropdown37" ,"dropdown38" , "dropdown39" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
