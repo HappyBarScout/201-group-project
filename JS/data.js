@@ -117,18 +117,18 @@ function dropSelect(){
 
 
 // builds one row of a table, give the location in the html page and the array
-function tableBuilder(tableLocation, arrayDataBuilder) {
-  var body = document.getElementsBysetAttribute(tableLocation)[0];
-  var row = document.createElement("tr");
-  for (var index = 0; index < arrayDataBuilder.length; index++) {
-    var cell = document.createElement("td");
-    var cellText = document.createTextNode(arrayDataBuilder[index]);
-    cell.appendChild(cellText);
-    row.appendChild(cell);
-  };
-  //row added to end of table body
-  body.appendChild(row);
-};
+// function tableBuilder(tableLocation, arrayDataBuilder) {
+//   var body = document.getElementsByClassName(tableLocation)[0];
+//   var row = document.createElement("tr");
+//   for (var index = 0; index < arrayDataBuilder.length; index++) {
+//     var cell = document.createElement("td");
+//     var cellText = document.createTextNode(arrayDataBuilder[index]);
+//     cell.appendChild(cellText);
+//     row.appendChild(cell);
+//   };
+//   //row added to end of table body
+//   body.appendChild(row);
+// };
 
 // event listeners
 
