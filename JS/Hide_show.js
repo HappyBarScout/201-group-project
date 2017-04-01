@@ -65,9 +65,6 @@ if (document.getElementById('slingshot').getAttribute('class') === "hide") {
 document.getElementById('slingshot').setAttribute('class', 'item');
 
 };
-if (document.getElementById('').getAttribute('class') === "hide") {
-document.getElementById('').setAttribute('class', 'item');
-};
 };
 //   if (document.getElementById('knock').getAttribute('class') === "item") {
 //     document.getElementById('knock').setAttribute('class', 'hide');

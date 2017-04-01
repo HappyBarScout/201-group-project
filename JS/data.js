@@ -1,32 +1,136 @@
-// This file sets up data for the javascript funtionality
+// js for the popout nav
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+}
 
-var barArray =[];
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+var bangArray = ["dropdown1" , "dropdown18", "dropdown27" ,"dropdown38" , "dropdown42", "dropdown43", "dropdown44" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var knockArray = ["dropdown2" , "dropdown19", "dropdown37" ,"dropdown38" , "dropdown39" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var aviaryArray = [ "dropdown3" , "dropdown20" , "dropdown38" , "dropdown39" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51"];
+var interurbanArray = ["dropdown4" , "dropdown21" , "dropdown46", "dropdown36" ,"dropdown37" , "dropdown38", "dropdown43", "dropdown44" , "dropdown45" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52" , "dropdown53"];
+var raesArray = ["dropdown5" , "dropdown19" , "dropdown35", "dropdown36" ,"dropdown37" , "dropdown38" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var paleysArray = ["dropdown6" , "dropdown22","dropdown38" , "dropdown39" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var bartiniArray = ["dropdown7" , "dropdown23" , "dropdown34" ,"dropdown38" , "dropdown37", "dropdown39", "dropdown42" , "dropdown43" , "dropdown44", "dropdown45" ,"dropdown46" , "dropdown47" , "dropdown48", "dropdown49" , "dropdown50" , "dropdown51", "dropdown52", "dropdown53" ];
+var ringsideArray = ["dropdown8" , "dropdown24" , "dropdown46" ,"dropdown42" , "dropdown43", "dropdown44", "dropdown45" , "dropdown37" , "dropdown38" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51" , "dropdown52" , "dropdown53"];
+var teardropArray = ["dropdown9" , "dropdown23" , "dropdown39" , "dropdown37" , "dropdown38" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51"];
+var clydeArray = ["dropdown10" , "dropdown25" , "dropdown36" , "dropdown37" , "dropdown38" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var imperialArray = ["dropdown11" , "dropdown26" , "dropdown35" , "dropdown36" , "dropdown37" , "dropdown38" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var sauceArray = ["dropdown12" , "dropdown27" , "dropdown37" , "dropdown39" , "dropdown38" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52"];
+var trifectaArray = ["dropdown13" , "dropdown19" , "dropdown28" , "dropdown38" , "dropdown37" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var tapalayaArray = [ "dropdown14" , "dropdown29" , "dropdown37" , "dropdown38" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var aaltoArray = ["dropdown15" , "dropdown30" , "dropdown31" , "dropdown38" , "dropdown39" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var dotsArray = ["dropdown16" , "dropdown32" , "dropdown35" ,"dropdown36" , "dropdown37", "dropdown38", "dropdown39" , "dropdown44" , "dropdown45" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51"];
+var slingshotArray = ["dropdown17" , "dropdown31" , "dropdown33", "dropdown36", "dropdown37" , "dropdown38" , "dropdown39" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51"];
 
 
-// create object constructor
-var barObject = function(name, type, hours, position) {
-  this.label = name;
-  this.foodType = type;
-  this.hours = hours;
-  this.position = position;
-};
 
 
-// List of barObjects
-barArray.push(new barObject("Bang Bang PDX", "Thai, Wings", "5-6pm, and 9:30-midnight everyday", 1));
-barArray.push(new barObject("The Knock Back", "American", "4-6pm everyday", 2));
-barArray.push(new barObject("Aviary", "Japanese", "M-F 5-7pm", 3));
-barArray.push(new barObject("Interurban", "American Fusion", "M-Sa 3-6pm, Su 10pm to Close", 4));
-barArray.push(new barObject("Rae's Lakeveiw Lounge", "American", "2-6pm everyday", 5));
-barArray.push(new barObject("Paley's Place", "Fine Dining", "M-Th 5:30-6:30pm, F-Su 5-6:30pm", 6));
-barArray.push(new barObject("Bartini", "Martini Bar", "Tu-Sa 4-6:30pm 9:30-close, Su-M all day ", 7));
-barArray.push(new barObject("Ringside", "Steakhouse", "M-Sa 9:30pm - Close, Su 4-5:30pm and 9:30-Close ", 8));
-barArray.push(new barObject("Teardrop Lounge", "Martini Bar", "M-F 4-7pm", 9));
-barArray.push(new barObject("Clyde Common", "Domestic and Foreign", "3-6pm everyday", 10));
-barArray.push(new barObject("Imperial", "Seafood, Grill", "2-6pm everyday", 11));
-barArray.push(new barObject("Saucebox", "Thai", "Tu-F 4:30-6:30pm, Sa 5-6:30pm", 12));
-barArray.push(new barObject("Trifecta Tavern", "American, Karaoke", "M-Th 5-6pm, F&Su 4-6pm, Sa 4-5pm", 13));
-barArray.push(new barObject("Tapalaya", "Southern", "4-6pm everyday", 14));
-barArray.push(new barObject("Aalto Lounge", "Snacks, Bar", "5-7pm everyday", 15));
-barArray.push(new barObject("Dots Cafe", "Dinner food", "M-F 2-7pm & 11pm-1am", 16));
-barArray.push(new barObject("Slingshot", "Bar, Pub food", "M-F 3-7pm", 17));
+
+
+
+  // get the request clicked from local storage and change the one that we want to show
+  function dropSelect(){
+    console.log("click!");
+    var localResult = localStorage.getItem("clickedItem");
+    console.log( localResult);
+    // get from local storage
+    if ((localResult) ===  ) {
+      document.getElementById("bang").setAttribute("class","show");
+
+    } else if ((localResult) === ) {
+      document.getElementById("knock").setAttrubute("class","show");
+
+    } else if ((localResult) ===) {
+      document.getElementById("aviary").setAttrubute("class","show");
+
+    } else if ((localResult) === ) {
+      document.getElementById("interurban").setAttrubute("class","show");
+
+    } else if ((localResult) === ) {
+      document.getElementById("raes").setAttrubute("class","show");
+
+    } else if ((localResult) === ) {
+      document.getElementById("paleys").setAttrubute("class","show");
+
+    } else if ((localResult) === ) {
+      document.getElementById("bartini").setAttrubute("class","show");
+
+    } else if ((localResult) ===  ) {
+      document.getElementById("ringside").setAttrubute("class","show");
+
+    } else if ((localResult) ===  ) {
+      document.getElementById("teardrop").setAttrubute("class","show");
+
+    } else if ((localResult) === ) {
+      document.getElementById("clyde").setAttrubute("class","show");
+
+    } else if ((localResult) === ) {
+      document.getElementById("imperial").setAttrubute("class","show");
+
+    } else if ((localResult) === ) {
+      document.getElementById("sauce").setAttrubute("class","show");
+
+    } else if ((localResult) === ) {
+      document.getElementById("trifecta").setAttrubute("class","show");
+
+    } else if ((localResult) ===) {
+      document.getElementById("tapalaya").setAttrubute("class","show");
+
+    } else if ((localResult) === ) {
+      document.getElementById("aalto").setAttrubute("class","show");
+
+    } else if ((localResult) === ) {
+      document.getElementById("dots").setAttrubute("class","show");
+
+    } else if ((localResult) === ) {
+      document.getElementById("slingshot").setAttrubute("class","show");
+
+  } else {
+    document.getElementById("bang").setAttribute("class","show");
+    document.getElementById("knock").setAttrubute("class","show");
+    document.getElementById("aviary").setAttrubute("class","show");
+    document.getElementById("interurban").setAttrubute("class","show");
+    document.getElementById("raes").setAttrubute("class","show");
+    document.getElementById("paleys").setAttrubute("class","show");
+    document.getElementById("bartini").setAttrubute("class","show");
+    document.getElementById("ringside").setAttrubute("class","show");
+    document.getElementById("teardrop").setAttrubute("class","show");
+    document.getElementById("clyde").setAttrubute("class","show");
+    document.getElementById("imperial").setAttrubute("class","show");
+    document.getElementById("sauce").setAttrubute("class","show");
+    document.getElementById("trifecta").setAttrubute("class","show");
+    document.getElementById("tapalaya").setAttrubute("class","show");
+    document.getElementById("aalto").setAttrubute("class","show");
+    document.getElementById("dots").setAttrubute("class","show");
+    document.getElementById("slingshot").setAttrubute("class","show");
+
+  };
+    };
+
+
+
+
+
+
+  // builds one row of a table, give the location in the html page and the array
+  function tableBuilder(tableLocation, arrayDataBuilder) {
+    var body = document.getElementsBysetAttrubute(tableLocation)[0];
+    var row = document.createElement("tr");
+    for (var index = 0; index < arrayDataBuilder.length; index++) {
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode(arrayDataBuilder[index]);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+    };
+    //row added to end of table body
+    body.appendChild(row);
+  };
+
+  // event listeners
+
+  // window.addEventListener("click", recordClick);
+  window.addEventListener("load", dropSelect);
+  // window.addEventListener("click", formSubmit);
