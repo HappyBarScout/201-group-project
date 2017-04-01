@@ -1,6 +1,6 @@
-#hidden {
-    width: 100%;
-    padding: 50px 0;
-    text-align: center;
-    margin-top:20px;
+.item {
+display: none;
+}
+.show {
+  display: block;
 }
