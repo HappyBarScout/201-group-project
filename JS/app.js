@@ -187,10 +187,35 @@ function saveBar() {
         var barHours = document.getElementById("hours").value;
         console.log('Found ' + barHours);
 
-      var openBar = newBarArray.push([barLocation, barName, barHours,barDays]);
+      var openBar = [barLocation, barName, barHours,barDays];
         console.log('Found ' +  JSON.stringify(newBarArray[newBarArray.length-1]));
 
-        localStorage.setItem("newBar",JSON.stringify(newBarArray[newBarArray.length-1]));
+        localStorage.setItem("newBar",JSON.stringify(openBar));
  // storedNames = JSON.parse(localStorage.getItem("names"));
 };
 };
+
+// var itemSource = null;
+
+// get the name or id of the link clicked in index, and store to localStorage
+// get the name or id of the link clicked in index, and store to localStorage
+function recordClick(event) {
+  console.log("click!");
+  var clickedItem = event.target;
+   itemSource = clickedItem.src;
+  console.log(clickedItem);
+  var linkID = clickedItem.id;
+  // var lastSlash = itemSource.lastIndexOf("/") + 1;
+  // itemSource = itemSource.substring(lastSlash);
+  console.log(linkID + " was clicked.");
+
+  // resultsArray.push(itemSource);
+  // for (var index = 0; index < images.length; index++) {
+  //   if ((images[index].imageSource) === itemSource) {
+  //     images[index].y ++;
+  //   }
+
+  localStorage.setItem("clickedItem", linkID);
+};
+
+window.addEventListener("click", recordClick);

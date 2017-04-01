@@ -99,15 +99,30 @@ window.addEventListener("load", setHide);
 
 window.addEventListener("load", addBarTable);
 
+var newBarArray =[];
+
+var barHeaderArray =["Bar Name", "Location", "Days", "Hours"];
+
 function addBarTable(){
+
 var localNewBar = JSON.parse(localStorage.getItem("newBar"));
 console.log("add bar");
-newBarArray.push(localNewBar);
+// newBarArray.push(localNewBar);
 console.log("add new bar to array");
 console.log(newBarArray);
 tableBuilder("addBar", barHeaderArray);
-tableBuilder("addBar", newBarArray);
+tableBuilder("addBar", localNewBar);
 };
-attach_file
-Choose Files
-tag_faces
+
+function tableBuilder(tableLocation, arrayDataBuilder) {
+  var body = document.getElementsByClassName(tableLocation)[0];
+  var row = document.createElement("tr");
+  for (var index = 0; index < arrayDataBuilder.length; index++) {
+    var cell = document.createElement("td");
+    var cellText = document.createTextNode(arrayDataBuilder[index]);
+    cell.appendChild(cellText);
+    row.appendChild(cell);
+  };
+  //row added to end of table body
+  body.appendChild(row);
+};
