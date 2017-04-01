@@ -78,7 +78,7 @@ detailArray.push(["This unassuming spot near Foster Burger in Southeast serves $
 
 // js for the popout nav
 function openNav() {
-  document.getElementById("mySidenav").style.width = "175px";
+  document.getElementById("mySidenav").style.width = "200px";
 }
 
 function closeNav() {
@@ -103,47 +103,26 @@ function formSubmit() {
 
 };
 
-// get the request clicked from local storage and change the one that we don't want to hidden
-
+var itemSource = null;
+// get the name or id of the link clicked in index, and store to localStorage
 // get the name or id of the link clicked in index, and store to localStorage
 function recordClick(event) {
+  console.log("click!");
   var clickedItem = event.target;
-  var itemSource = clickedItem.src;
-  var lastSlash = itemSource.lastIndexOf("/") + 1;
-  itemSource = itemSource.substring(lastSlash);
-  console.log(itemSource + " was clicked.");
-  resultsArray.push(itemSource);
-  count++;
-  for (var index = 0; index < images.length; index++) {
-    if ((images[index].imageSource) === itemSource) {
-      images[index].y ++;
-    }
-  }
-  localStorage.setItem("count", count);
+   itemSource = clickedItem.src;
+  console.log(clickedItem);
+  var linkID = clickedItem.id;
+  // var lastSlash = itemSource.lastIndexOf("/") + 1;
+  // itemSource = itemSource.substring(lastSlash);
+  console.log(linkID + " was clicked.");
+
+  // resultsArray.push(itemSource);
+  // for (var index = 0; index < images.length; index++) {
+  //   if ((images[index].imageSource) === itemSource) {
+  //     images[index].y ++;
+  //   }
+
+  localStorage.setItem("clickedItem", linkID);
 };
 
-// builds one row of a table, give the location in the html page and the array
-function tableBuilder(tableLocation, arrayDataBuilder) {
-  var body = document.getElementsByClassName(tableLocation)[0];
-  var row = document.createElement("tr");
-  for (var index = 0; index < arrayDataBuilder.length; index++) {
-    var cell = document.createElement("td");
-    var cellText = document.createTextNode(arrayDataBuilder[index]);
-    cell.appendChild(cellText);
-    row.appendChild(cell);
-  };
-  //row added to end of table body
-  body.appendChild(row);
-}
-
-// event listeners
-
-// local storage
-// Store
-//localStorage.setItem("");
-// Retrieve
-
-
-
-//window.addEventListener("click", dropSelect);
-// window.addEventListener("click", formSubmit);
+window.addEventListener("click", recordClick);

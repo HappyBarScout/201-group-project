@@ -1,32 +1,134 @@
-// This file sets up data for the javascript funtionality
+// js for the popout nav
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+}
 
-var barArray =[];
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+var bangArray = ["dropdown1" , "dropdown18", "dropdown27" ,"dropdown38" , "dropdown42", "dropdown43", "dropdown44" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var knockArray = ["dropdown2" , "dropdown19", "dropdown37" ,"dropdown38" , "dropdown39" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var aviaryArray = [ "dropdown3" , "dropdown20" , "dropdown38" , "dropdown39" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51"];
+var interurbanArray = ["dropdown4" , "dropdown21" , "dropdown46", "dropdown36" ,"dropdown37" , "dropdown38", "dropdown43", "dropdown44" , "dropdown45" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52" , "dropdown53"];
+var raesArray = ["dropdown5" , "dropdown19" , "dropdown35", "dropdown36" ,"dropdown37" , "dropdown38" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var paleysArray = ["dropdown6" , "dropdown22","dropdown38" , "dropdown39" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var bartiniArray = ["dropdown7" , "dropdown23" , "dropdown34" ,"dropdown38" , "dropdown37", "dropdown39", "dropdown42" , "dropdown43" , "dropdown44", "dropdown45" ,"dropdown46" , "dropdown47" , "dropdown48", "dropdown49" , "dropdown50" , "dropdown51", "dropdown52", "dropdown53" ];
+var ringsideArray = ["dropdown8" , "dropdown24" , "dropdown46" ,"dropdown42" , "dropdown43", "dropdown44", "dropdown45" , "dropdown37" , "dropdown38" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51" , "dropdown52" , "dropdown53"];
+var teardropArray = ["dropdown9" , "dropdown23" , "dropdown39" , "dropdown37" , "dropdown38" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51"];
+var clydeArray = ["dropdown10" , "dropdown25" , "dropdown36" , "dropdown37" , "dropdown38" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var imperialArray = ["dropdown11" , "dropdown26" , "dropdown35" , "dropdown36" , "dropdown37" , "dropdown38" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var sauceArray = ["dropdown12" , "dropdown27" , "dropdown37" , "dropdown39" , "dropdown38" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52"];
+var trifectaArray = ["dropdown13" , "dropdown19" , "dropdown28" , "dropdown38" , "dropdown37" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var tapalayaArray = [ "dropdown14" , "dropdown29" , "dropdown37" , "dropdown38" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var aaltoArray = ["dropdown15" , "dropdown30" , "dropdown31" , "dropdown38" , "dropdown39" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51", "dropdown52", "dropdown53"];
+var dotsArray = ["dropdown16" , "dropdown32" , "dropdown35" ,"dropdown36" , "dropdown37", "dropdown38", "dropdown39" , "dropdown44" , "dropdown45" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51"];
+var slingshotArray = ["dropdown17" , "dropdown31" , "dropdown33", "dropdown36", "dropdown37" , "dropdown38" , "dropdown39" , "dropdown47" , "dropdown48", "dropdown49" ,"dropdown50" , "dropdown51"];
 
 
-// create object constructor
-var barObject = function(name, type, hours, position) {
-  this.label = name;
-  this.foodType = type;
-  this.hours = hours;
-  this.position = position;
+
+// (bangArray.indexOf(localResult) >= -1)
+
+
+// get the request clicked from local storage and change the one that we want to show
+function dropSelect(){
+  console.log("click!");
+  var localResult = localStorage.getItem("clickedItem");
+  console.log( localResult);
+  // get from local storage
+  if (bangArray.indexOf(localResult) > -1) {
+    document.getElementById("bang").setAttribute("class","show");
+  };
+   if (knockArray.indexOf(localResult) > -1) {
+    document.getElementById('knock').setAttribute('class', 'item');
+
+  };  if (aviaryArray.indexOf(localResult) > -1) {
+    document.getElementById('aviary').setAttribute('class', 'item');
+
+  };  if (interurbanArray.indexOf(localResult) > -1) {
+    document.getElementById('interurban').setAttribute('class', 'item');
+
+  };  if (raesArray.indexOf(localResult) > -1) {
+    document.getElementById('raes').setAttribute('class', 'item');
+
+  };  if (paleysArray.indexOf(localResult) > -1) {
+    document.getElementById('paleys').setAttribute('class', 'item');
+
+  };  if (bartiniArray.indexOf(localResult) > -1) {
+    document.getElementById('bartini').setAttribute('class', 'item');
+
+  };  if (ringsideArray.indexOf(localResult) > -1) {
+    document.getElementById('ringside').setAttribute('class', 'item');
+
+  };  if (teardropArray.indexOf(localResult) > -1) {
+    document.getElementById('teardrop').setAttribute('class', 'item');
+
+  };  if (clydeArray.indexOf(localResult) > -1) {
+    document.getElementById('clyde').setAttribute('class', 'item');
+
+  };  if (imperialArray.indexOf(localResult) > -1) {
+    document.getElementById('imperial').setAttribute('class', 'item');
+
+  };  if (sauceArray.indexOf(localResult) > -1) {
+    document.getElementById("sauce").setAttribute("class","show");
+
+  };  if (trifectaArray.indexOf(localResult) > -1) {
+    document.getElementById("trifecta").setAttribute("class","show");
+
+  };  if (tapalayaArray.indexOf(localResult) > -1) {
+    document.getElementById("tapalaya").setAttribute("class","show");
+
+  };  if (aaltoArray.indexOf(localResult) > -1) {
+    document.getElementById("aalto").setAttribute("class","show");
+
+  };  if (dotsArray.indexOf(localResult) > -1) {
+    document.getElementById("dots").setAttribute("class","show");
+
+  };  if (slingshotArray.indexOf(localResult) > -1) {
+    document.getElementById("slingshot").setAttribute("class","show");
+  // } else {
+  //   document.getElementById("bang").setAttribute("class","show");
+  //   document.getElementById("knock").setAttribute("class","show");
+  //   document.getElementById("aviary").setAttribute("class","show");
+  //   document.getElementById("interurban").setAttribute("class","show");
+  //   document.getElementById("raes").setAttribute("class","show");
+  //   document.getElementById("paleys").setAttribute("class","show");
+  //   document.getElementById("bartini").setAttribute("class","show");
+  //   document.getElementById("ringside").setAttribute("class","show");
+  //   document.getElementById("teardrop").setAttribute("class","show");
+  //   document.getElementById("clyde").setAttribute("class","show");
+  //   document.getElementById("imperial").setAttribute("class","show");
+  //   document.getElementById("sauce").setAttribute("class","show");
+  //   document.getElementById("trifecta").setAttribute("class","show");
+  //   document.getElementById("tapalaya").setAttribute("class","show");
+  //   document.getElementById("aalto").setAttribute("class","show");
+  //   document.getElementById("dots").setAttribute("class","show");
+  //   document.getElementById("slingshot").setAttribute("class","show");
+
+  };
 };
 
 
-// List of barObjects
-barArray.push(new barObject("Bang Bang PDX", "Thai, Wings", "5-6pm, and 9:30-midnight everyday", 1));
-barArray.push(new barObject("The Knock Back", "American", "4-6pm everyday", 2));
-barArray.push(new barObject("Aviary", "Japanese", "M-F 5-7pm", 3));
-barArray.push(new barObject("Interurban", "American Fusion", "M-Sa 3-6pm, Su 10pm to Close", 4));
-barArray.push(new barObject("Rae's Lakeveiw Lounge", "American", "2-6pm everyday", 5));
-barArray.push(new barObject("Paley's Place", "Fine Dining", "M-Th 5:30-6:30pm, F-Su 5-6:30pm", 6));
-barArray.push(new barObject("Bartini", "Martini Bar", "Tu-Sa 4-6:30pm 9:30-close, Su-M all day ", 7));
-barArray.push(new barObject("Ringside", "Steakhouse", "M-Sa 9:30pm - Close, Su 4-5:30pm and 9:30-Close ", 8));
-barArray.push(new barObject("Teardrop Lounge", "Martini Bar", "M-F 4-7pm", 9));
-barArray.push(new barObject("Clyde Common", "Domestic and Foreign", "3-6pm everyday", 10));
-barArray.push(new barObject("Imperial", "Seafood, Grill", "2-6pm everyday", 11));
-barArray.push(new barObject("Saucebox", "Thai", "Tu-F 4:30-6:30pm, Sa 5-6:30pm", 12));
-barArray.push(new barObject("Trifecta Tavern", "American, Karaoke", "M-Th 5-6pm, F&Su 4-6pm, Sa 4-5pm", 13));
-barArray.push(new barObject("Tapalaya", "Southern", "4-6pm everyday", 14));
-barArray.push(new barObject("Aalto Lounge", "Snacks, Bar", "5-7pm everyday", 15));
-barArray.push(new barObject("Dots Cafe", "Dinner food", "M-F 2-7pm & 11pm-1am", 16));
-barArray.push(new barObject("Slingshot", "Bar, Pub food", "M-F 3-7pm", 17));
+
+
+
+
+// builds one row of a table, give the location in the html page and the array
+function tableBuilder(tableLocation, arrayDataBuilder) {
+  var body = document.getElementsBysetAttribute(tableLocation)[0];
+  var row = document.createElement("tr");
+  for (var index = 0; index < arrayDataBuilder.length; index++) {
+    var cell = document.createElement("td");
+    var cellText = document.createTextNode(arrayDataBuilder[index]);
+    cell.appendChild(cellText);
+    row.appendChild(cell);
+  };
+  //row added to end of table body
+  body.appendChild(row);
+};
+
+// event listeners
+
+// window.addEventListener("click", recordClick);
+window.addEventListener("load", dropSelect);
+// window.addEventListener("click", formSubmit);
