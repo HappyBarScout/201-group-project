@@ -104,42 +104,6 @@ function formSubmit() {
 };
 
 // get the request clicked from local storage and change the one that we don't want to hidden
-function dropSelect(){
-  // get from local storage
-  switch (localStorage.getItem("selectValue")) {
-    case ("monday"):
-    // change class to .hidden for bar id numbers
-    break;
-    case ("tuesday"):
-    // change class to .hidden for bar id numbers
-    break;
-    case ("wednesday"):
-    // change class to .hidden for bar id numbers
-    break;
-    case ("thursday"):
-    // change class to .hidden for bar id numbers
-    break;
-    case ("friday"):
-    // change class to .hidden for bar id numbers
-    break;
-    case ("saturday"):
-    // change class to .hidden for bar id numbers
-    break;
-    case ("sunday"):
-    // change class to .hidden for bar id numbers
-    break;
-    case ("everyday"):
-    // change class to .hidden for bar id numbers
-    break;
-
-
-
-
-    default:
-
-
-  }
-}
 
 // get the name or id of the link clicked in index, and store to localStorage
 function recordClick(event) {
@@ -181,5 +145,5 @@ function tableBuilder(tableLocation, arrayDataBuilder) {
 
 
 
-window.addEventListener("click", dropSelect);
+//window.addEventListener("click", dropSelect);
 // window.addEventListener("click", formSubmit);
