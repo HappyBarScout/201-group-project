@@ -102,12 +102,14 @@ function formSubmit() {
 
 
 };
+
+var itemSource = null;
 // get the name or id of the link clicked in index, and store to localStorage
 // get the name or id of the link clicked in index, and store to localStorage
 function recordClick(event) {
   console.log("click!");
   var clickedItem = event.target;
-  var itemSource = clickedItem.src;
+   itemSource = clickedItem.src;
   console.log(clickedItem);
   var linkID = clickedItem.id;
   // var lastSlash = itemSource.lastIndexOf("/") + 1;

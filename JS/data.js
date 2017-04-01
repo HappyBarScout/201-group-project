@@ -27,110 +27,108 @@ var slingshotArray = ["dropdown17" , "dropdown31" , "dropdown33", "dropdown36", 
 
 
 
+// (bangArray.indexOf(localResult) >= -1)
 
 
-
-
-  // get the request clicked from local storage and change the one that we want to show
-  function dropSelect(){
-    console.log("click!");
-    var localResult = localStorage.getItem("clickedItem");
-    console.log( localResult);
-    // get from local storage
-    if ((localResult) ===  ) {
-      document.getElementById("bang").setAttribute("class","show");
-
-    } else if ((localResult) === ) {
-      document.getElementById("knock").setAttrubute("class","show");
-
-    } else if ((localResult) ===) {
-      document.getElementById("aviary").setAttrubute("class","show");
-
-    } else if ((localResult) === ) {
-      document.getElementById("interurban").setAttrubute("class","show");
-
-    } else if ((localResult) === ) {
-      document.getElementById("raes").setAttrubute("class","show");
-
-    } else if ((localResult) === ) {
-      document.getElementById("paleys").setAttrubute("class","show");
-
-    } else if ((localResult) === ) {
-      document.getElementById("bartini").setAttrubute("class","show");
-
-    } else if ((localResult) ===  ) {
-      document.getElementById("ringside").setAttrubute("class","show");
-
-    } else if ((localResult) ===  ) {
-      document.getElementById("teardrop").setAttrubute("class","show");
-
-    } else if ((localResult) === ) {
-      document.getElementById("clyde").setAttrubute("class","show");
-
-    } else if ((localResult) === ) {
-      document.getElementById("imperial").setAttrubute("class","show");
-
-    } else if ((localResult) === ) {
-      document.getElementById("sauce").setAttrubute("class","show");
-
-    } else if ((localResult) === ) {
-      document.getElementById("trifecta").setAttrubute("class","show");
-
-    } else if ((localResult) ===) {
-      document.getElementById("tapalaya").setAttrubute("class","show");
-
-    } else if ((localResult) === ) {
-      document.getElementById("aalto").setAttrubute("class","show");
-
-    } else if ((localResult) === ) {
-      document.getElementById("dots").setAttrubute("class","show");
-
-    } else if ((localResult) === ) {
-      document.getElementById("slingshot").setAttrubute("class","show");
-
-  } else {
+// get the request clicked from local storage and change the one that we want to show
+function dropSelect(){
+  console.log("click!");
+  var localResult = localStorage.getItem("clickedItem");
+  console.log( localResult);
+  // get from local storage
+  if (bangArray.indexOf(localResult) > -1) {
     document.getElementById("bang").setAttribute("class","show");
-    document.getElementById("knock").setAttrubute("class","show");
-    document.getElementById("aviary").setAttrubute("class","show");
-    document.getElementById("interurban").setAttrubute("class","show");
-    document.getElementById("raes").setAttrubute("class","show");
-    document.getElementById("paleys").setAttrubute("class","show");
-    document.getElementById("bartini").setAttrubute("class","show");
-    document.getElementById("ringside").setAttrubute("class","show");
-    document.getElementById("teardrop").setAttrubute("class","show");
-    document.getElementById("clyde").setAttrubute("class","show");
-    document.getElementById("imperial").setAttrubute("class","show");
-    document.getElementById("sauce").setAttrubute("class","show");
-    document.getElementById("trifecta").setAttrubute("class","show");
-    document.getElementById("tapalaya").setAttrubute("class","show");
-    document.getElementById("aalto").setAttrubute("class","show");
-    document.getElementById("dots").setAttrubute("class","show");
-    document.getElementById("slingshot").setAttrubute("class","show");
+  };
+   if (knockArray.indexOf(localResult) > -1) {
+    document.getElementById('knock').setAttribute('class', 'item');
+
+  };  if (aviaryArray.indexOf(localResult) > -1) {
+    document.getElementById('aviary').setAttribute('class', 'item');
+
+  };  if (interurbanArray.indexOf(localResult) > -1) {
+    document.getElementById('interurban').setAttribute('class', 'item');
+
+  };  if (raesArray.indexOf(localResult) > -1) {
+    document.getElementById('raes').setAttribute('class', 'item');
+
+  };  if (paleysArray.indexOf(localResult) > -1) {
+    document.getElementById('paleys').setAttribute('class', 'item');
+
+  };  if (bartiniArray.indexOf(localResult) > -1) {
+    document.getElementById('bartini').setAttribute('class', 'item');
+
+  };  if (ringsideArray.indexOf(localResult) > -1) {
+    document.getElementById('ringside').setAttribute('class', 'item');
+
+  };  if (teardropArray.indexOf(localResult) > -1) {
+    document.getElementById('teardrop').setAttribute('class', 'item');
+
+  };  if (clydeArray.indexOf(localResult) > -1) {
+    document.getElementById('clyde').setAttribute('class', 'item');
+
+  };  if (imperialArray.indexOf(localResult) > -1) {
+    document.getElementById('imperial').setAttribute('class', 'item');
+
+  };  if (sauceArray.indexOf(localResult) > -1) {
+    document.getElementById("sauce").setAttribute("class","show");
+
+  };  if (trifectaArray.indexOf(localResult) > -1) {
+    document.getElementById("trifecta").setAttribute("class","show");
+
+  };  if (tapalayaArray.indexOf(localResult) > -1) {
+    document.getElementById("tapalaya").setAttribute("class","show");
+
+  };  if (aaltoArray.indexOf(localResult) > -1) {
+    document.getElementById("aalto").setAttribute("class","show");
+
+  };  if (dotsArray.indexOf(localResult) > -1) {
+    document.getElementById("dots").setAttribute("class","show");
+
+  };  if (slingshotArray.indexOf(localResult) > -1) {
+    document.getElementById("slingshot").setAttribute("class","show");
+  // } else {
+  //   document.getElementById("bang").setAttribute("class","show");
+  //   document.getElementById("knock").setAttribute("class","show");
+  //   document.getElementById("aviary").setAttribute("class","show");
+  //   document.getElementById("interurban").setAttribute("class","show");
+  //   document.getElementById("raes").setAttribute("class","show");
+  //   document.getElementById("paleys").setAttribute("class","show");
+  //   document.getElementById("bartini").setAttribute("class","show");
+  //   document.getElementById("ringside").setAttribute("class","show");
+  //   document.getElementById("teardrop").setAttribute("class","show");
+  //   document.getElementById("clyde").setAttribute("class","show");
+  //   document.getElementById("imperial").setAttribute("class","show");
+  //   document.getElementById("sauce").setAttribute("class","show");
+  //   document.getElementById("trifecta").setAttribute("class","show");
+  //   document.getElementById("tapalaya").setAttribute("class","show");
+  //   document.getElementById("aalto").setAttribute("class","show");
+  //   document.getElementById("dots").setAttribute("class","show");
+  //   document.getElementById("slingshot").setAttribute("class","show");
 
   };
-    };
+};
 
 
 
 
 
 
-  // builds one row of a table, give the location in the html page and the array
-  function tableBuilder(tableLocation, arrayDataBuilder) {
-    var body = document.getElementsBysetAttrubute(tableLocation)[0];
-    var row = document.createElement("tr");
-    for (var index = 0; index < arrayDataBuilder.length; index++) {
-      var cell = document.createElement("td");
-      var cellText = document.createTextNode(arrayDataBuilder[index]);
-      cell.appendChild(cellText);
-      row.appendChild(cell);
-    };
-    //row added to end of table body
-    body.appendChild(row);
+// builds one row of a table, give the location in the html page and the array
+function tableBuilder(tableLocation, arrayDataBuilder) {
+  var body = document.getElementsBysetAttribute(tableLocation)[0];
+  var row = document.createElement("tr");
+  for (var index = 0; index < arrayDataBuilder.length; index++) {
+    var cell = document.createElement("td");
+    var cellText = document.createTextNode(arrayDataBuilder[index]);
+    cell.appendChild(cellText);
+    row.appendChild(cell);
   };
+  //row added to end of table body
+  body.appendChild(row);
+};
 
-  // event listeners
+// event listeners
 
-  // window.addEventListener("click", recordClick);
-  window.addEventListener("load", dropSelect);
-  // window.addEventListener("click", formSubmit);
+// window.addEventListener("click", recordClick);
+window.addEventListener("load", dropSelect);
+// window.addEventListener("click", formSubmit);
